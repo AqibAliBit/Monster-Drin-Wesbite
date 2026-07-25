@@ -1,1 +1,324 @@
-/* Styles for Storys page */
+        .story-page {
+          --lime: #b6e429;
+          --black: #0a0a0a;
+          --panel: #111111;
+          --muted: #b9b9b9;
+          background: var(--black);
+          color: #fff;
+          font-family: 'Helvetica Neue', Arial, sans-serif;
+          overflow-x: hidden;
+        }
+        h1, h2, h3 { font-family: 'Arial Black', Arial, sans-serif; margin: 0; }
+
+        /* Hero */
+        .hero {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+          padding: 70px 60px;
+          flex-wrap: wrap;
+        }
+        .hero-text {
+          flex: 1 1 380px;
+          min-width: 300px;
+        }
+        .eyebrow {
+          color: var(--lime);
+          letter-spacing: 4px;
+          font-weight: 700;
+          font-size: 13px;
+          margin-bottom: 14px;
+        }
+        .hero-title {
+          font-size: 52px;
+          line-height: 1.1;
+          font-weight: 800;
+          margin-bottom: 22px;
+        }
+        .hero-title .accent { color: var(--lime); }
+        .hero-desc {
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.7;
+          max-width: 400px;
+          margin-bottom: 30px;
+        }
+        .explore-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          background: transparent;
+          border: 1px solid var(--lime);
+          color: #fff;
+          padding: 16px 26px;
+          font-weight: 700;
+          font-size: 13px;
+          letter-spacing: 1px;
+          cursor: pointer;
+        }
+        .explore-btn:hover { background: rgba(182,228,41,0.08); }
+        .explore-btn i { color: var(--lime); }
+
+        .hero-visual {
+          flex: 1 1 420px;
+          min-width: 320px;
+          position: relative;
+          height: 460px;
+          border-radius: 10px;
+          overflow: hidden;
+          background:
+            radial-gradient(circle at 60% 50%, rgba(182,228,41,0.35), transparent 60%),
+            #050505;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .can {
+          width: 190px;
+          height: 340px;
+          background: linear-gradient(180deg, #1a1a1a, #000);
+          border-radius: 14px;
+          border: 1px solid #2a2a2a;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+          padding-bottom: 24px;
+          box-shadow: 0 0 60px rgba(182,228,41,0.5);
+          position: relative;
+          z-index: 2;
+        }
+        .can-claws {
+          font-size: 46px;
+          color: var(--lime);
+          font-weight: 900;
+          line-height: 0.7;
+          margin-bottom: 20px;
+          letter-spacing: -6px;
+        }
+        .can-brand {
+          font-size: 15px;
+          font-weight: 800;
+          letter-spacing: 2px;
+        }
+        .can-brand span {
+          display: block;
+          color: var(--lime);
+          font-size: 10px;
+          letter-spacing: 4px;
+          margin-top: 3px;
+        }
+
+        /* Different breed section */
+        .breed {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+        .breed-visual {
+          flex: 1 1 420px;
+          min-width: 300px;
+          height: 340px;
+          background:
+            radial-gradient(circle at 50% 40%, rgba(182,228,41,0.4), transparent 65%),
+            #050505;
+        }
+        .breed-visual img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .breed-text {
+          flex: 1 1 420px;
+          min-width: 300px;
+          padding: 50px 60px;
+        }
+        .breed-text .eyebrow { margin-bottom: 10px; }
+        .breed-text h2 {
+          font-size: 30px;
+          line-height: 1.3;
+          margin-bottom: 16px;
+        }
+        .divider {
+          width: 40px;
+          height: 3px;
+          background: var(--lime);
+          margin-bottom: 18px;
+        }
+        .breed-text p {
+          color: var(--muted);
+          font-size: 14px;
+          line-height: 1.8;
+          max-width: 420px;
+        }
+
+        /* Journey */
+        .journey {
+          padding: 70px 40px;
+          position: relative;
+        }
+        .journey h2 {
+          text-align: center;
+          color: var(--lime);
+          letter-spacing: 3px;
+          font-size: 15px;
+          font-weight: 700;
+          margin-bottom: 50px;
+          position: relative;
+        }
+        .journey h2::before, .journey h2::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          width: 120px;
+          height: 1px;
+          background: #333;
+        }
+        .journey h2::before { left: calc(50% - 220px); }
+        .journey h2::after { right: calc(50% - 220px); }
+
+        .timeline {
+          display: flex;
+          justify-content: space-between;
+          max-width: 1000px;
+          margin: 0 auto;
+          position: relative;
+          flex-wrap: wrap;
+          gap: 30px;
+        }
+        .timeline::before {
+          content: "";
+          position: absolute;
+          top: 66px;
+          left: 5%;
+          right: 5%;
+          height: 1px;
+          background: #2a2a2a;
+        }
+        .t-item {
+          flex: 1 1 200px;
+          text-align: center;
+          position: relative;
+          z-index: 1;
+        }
+        .t-icon {
+          font-size: 26px;
+          color: var(--lime);
+          margin-bottom: 14px;
+        }
+        .t-dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: var(--lime);
+          margin: 0 auto 14px;
+        }
+        .t-year {
+          color: var(--lime);
+          font-weight: 800;
+          font-size: 15px;
+          margin-bottom: 6px;
+        }
+        .t-title {
+          font-weight: 700;
+          font-size: 15px;
+          margin-bottom: 8px;
+        }
+        .t-text {
+          color: var(--muted);
+          font-size: 12.5px;
+          line-height: 1.6;
+          max-width: 190px;
+          margin: 0 auto;
+        }
+
+        /* Drives us */
+        .drives {
+          padding: 60px 40px 90px;
+        }
+        .drives h2 {
+          text-align: center;
+          color: var(--lime);
+          letter-spacing: 3px;
+          font-size: 15px;
+          font-weight: 700;
+          margin-bottom: 36px;
+        }
+        .drives-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 18px;
+          max-width: 1150px;
+          margin: 0 auto;
+        }
+        .d-card {
+          background: var(--panel);
+          border-radius: 8px;
+          overflow: hidden;
+        }
+        .d-img {
+          height: 150px;
+          background-size: cover;
+          background-position: center;
+          filter: grayscale(30%) brightness(0.7);
+        }
+        .d-body {
+          padding: 16px 18px 20px;
+        }
+        .d-head {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 10px;
+        }
+        .d-head i {
+          color: var(--lime);
+          font-size: 18px;
+        }
+        .d-head span {
+          font-weight: 800;
+          font-size: 14px;
+          letter-spacing: 0.5px;
+        }
+        .d-body p {
+          color: var(--muted);
+          font-size: 12.5px;
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        /* Banner */
+        .banner {
+          position: relative;
+          padding: 100px 40px;
+          text-align: center;
+          background:
+            radial-gradient(circle at 15% 30%, rgba(182,228,41,0.25), transparent 45%),
+            radial-gradient(circle at 85% 70%, rgba(182,228,41,0.25), transparent 45%),
+            #050505;
+        }
+        .banner-title {
+          font-size: 56px;
+          font-weight: 900;
+          font-style: italic;
+          line-height: 1.15;
+          letter-spacing: 1px;
+        }
+        .banner-title .accent { color: var(--lime); }
+        .banner-sub {
+          margin-top: 18px;
+          letter-spacing: 6px;
+          font-size: 13px;
+          color: var(--muted);
+          font-weight: 700;
+        }
+
+        @media (max-width: 900px) {
+          .drives-grid { grid-template-columns: repeat(2, 1fr); }
+          .hero-title { font-size: 38px; }
+          .banner-title { font-size: 36px; }
+        }
+        @media (max-width: 560px) {
+          .drives-grid { grid-template-columns: 1fr; }
+          .hero, .breed-text { padding: 40px 24px; }
+        }

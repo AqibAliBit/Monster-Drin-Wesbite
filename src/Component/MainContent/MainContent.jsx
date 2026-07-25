@@ -5,7 +5,9 @@ import { RiTwitterXLine } from "@remixicon/react";
 import { RiInstagramLine } from "@remixicon/react";
 import { RiYoutubeLine} from "@remixicon/react";
 import Monstersmallvideo from '../../assets/Monstersmallvideo.mp4'
+import {useNavigate} from 'react-router-dom'
 const MainContent = () => {
+  let navigate=useNavigate()
       const date = new Date();
 
 let hours = date.getHours();
@@ -21,7 +23,9 @@ console.log(`${hours}:${minutes}:${seconds}`);
         <div className="Upper">
          <h1>Ignite your Pulse <br /> with <span>CAFFEINE</span></h1>
          <h4>Monster Drink</h4>
-         <button className='shop'>Shop Now</button>
+         <button className='shop' onClick={()=>{
+       navigate('/Drinks')
+         }}>Shop Now</button>
          </div>
          <div className="icons">
           <RiFacebookFill size={16} />

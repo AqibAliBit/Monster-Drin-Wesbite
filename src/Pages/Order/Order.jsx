@@ -3,8 +3,9 @@ import "./Order.css";
 import Navbar from '../../Component/Navbar/Navbar'
 import { RiDeleteBin6Line } from "@remixicon/react";
 import { Context } from '../../Context/MainContext';
-
+import {useNavigate} from 'react-router-dom'
 const Order = () => {
+ let navigate =useNavigate()
   let {product,setproduct} =useContext(Context)
 
    const [showPopup, setShowPopup] = useState(false);
@@ -124,13 +125,20 @@ if( newProduct[index].quantity>1){
         </div>
 
         <button className="checkout-btn" onClick={()=>{
-          setShowPopup(true)
-          setproduct([])
+          if(total===0){
+            alert('Please Select Atleast One Product')
+            
+          }else{
+            setShowPopup(true)
+          }
+          
         }}>
           Checkout
         </button>
 
-        <button className="continue-btn">
+        <button onClick={()=>{
+          navigate('/Drinks')
+        }} className="continue-btn">
           Continue Shopping
         </button>
 
@@ -146,8 +154,13 @@ if( newProduct[index].quantity>1){
 
       <p>Your order has been placed successfully.</p>
        <p>Your Total Bill Is {product.length>0?total-50:0}</p>
-      <button onClick={() => setShowPopup(false)}>
+      <button onClick={()=>{
+        setShowPopup(false)
+        setproduct([])
+      }}
+        >
         Close
+        
       </button>
 
     </div>
