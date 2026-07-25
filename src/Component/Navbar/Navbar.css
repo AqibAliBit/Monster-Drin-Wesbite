@@ -1,0 +1,72 @@
+/* Styles for Navbar component */
+nav {
+  position: relative;
+  z-index: 10;
+  color: white;
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.logo{
+    width: 200px;
+    height: 80px;
+    
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.main-nav{
+    width: 420px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+    gap: 30px;
+    border: 1px solid white;
+     background: rgba(15, 15, 15, 0.185);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+
+
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+.main-nav a{
+    text-decoration: none;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:14px;
+    
+}
+.cart{
+    width: 150px;
+    height: 80px;
+   
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+.cart .sign{
+    width: 80px;
+    padding: 5px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(152, 253, 0);
+    color: black;
+}

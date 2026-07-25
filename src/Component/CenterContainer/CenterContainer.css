@@ -1,0 +1,84 @@
+/* Styles for CenterContainer component */
+.center-container{
+    width: 100%;
+    height: 380px;
+    background: linear-gradient(
+  180deg,
+  #EDD1D7 0%,
+  #E8C7CF 100%
+);
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.wrapper1{
+    width: 350px;
+    height: 350px;
+  
+}
+.wrapper1 img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+margin-top: 10px;
+
+}
+.wrapper2{
+    width: 350px;
+    height: 350px;
+  
+    
+}
+.wrapper2 img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+transform: rotate(-15deg);
+margin-left: 120px;
+margin-top: -20px;
+
+}
+.content-center{
+    width: 300px;
+    height: 350px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.content-center .boost{
+    width: 140px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 3px;
+    background-color: rgb(220, 139, 255);
+     font-family: "Creepster", cursive;
+     font-weight: 400;
+}
+.content-center h2{
+    text-align: center;
+   
+    font-family: "Creepster", cursive;
+   font-size: 30px;
+    letter-spacing: 4px;
+}
+.content-center p{
+    text-align: center;
+   
+    font-size: small;
+    font-family: "Creepster", cursive;
+    letter-spacing: 2px;
+}
+.content-center .drink{
+    width: 100px;
+    padding: 8px;
+    border-radius: 20px;
+    background: none;
+    border: 1px solid rgb(34, 2, 2);
+    color: rgb(34, 2, 2) ;
+}
+.content-center .drink:active{
+    scale: 0.9;
+}

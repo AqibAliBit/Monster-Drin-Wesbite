@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.nav-active {
+  color: green;
+  font-weight: bold;
+}
+
+.nav-inactive {
+  color: gray;
+}
+.popup{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box{
+    width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(20px);
+    color: white;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,.1);
+}
+
+.popup-box button{
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    background: #9cff00;
+    border-radius: 10px;
+    cursor: pointer;
+}

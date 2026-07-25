@@ -1,0 +1,290 @@
+/* Styles for Order page */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#050505;
+}
+
+.cart-page{
+    width:100%;
+    min-height:100vh;
+    padding:50px 6%;
+    display:flex;
+    gap:40px;
+    background:#050505;
+}
+
+/* LEFT */
+
+.cart-left{
+    flex:2;
+}
+
+.cart-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.cart-heading h1{
+    color:#fff;
+    font-size:40px;
+}
+
+.cart-heading span{
+    color:#9cff00;
+    font-size:18px;
+}
+
+.cart-card{
+    width:100%;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    padding:20px 25px;
+    margin-bottom:25px;
+
+    display:flex;
+    align-items:center;
+    gap:25px;
+
+    transition:.35s;
+}
+
+.cart-card:hover{
+    transform:translateY(-6px);
+    border-color:#9cff00;
+    box-shadow:0 0 30px rgba(156,255,0,.18);
+}
+
+.cart-image{
+    width:120px;
+    height:120px;
+    background:#111;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.cart-image img{
+    width:80px;
+    transition:.4s;
+}
+
+.cart-card:hover img{
+    transform:rotate(-8deg) scale(1.1);
+}
+
+.cart-info{
+    flex:1;
+}
+
+.cart-info h2{
+    color:#fff;
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.cart-info p{
+    color:#9d9d9d;
+    margin-bottom:12px;
+}
+
+.cart-info h3{
+    color:#9cff00;
+    font-size:24px;
+}
+
+.quantity{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.quantity button{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:10px;
+    background:#181818;
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+    font-size:20px;
+}
+
+.quantity button:hover{
+    background:#9cff00;
+    color:#000;
+}
+
+.quantity span{
+    color:#fff;
+    font-size:20px;
+    width:25px;
+    text-align:center;
+}
+
+.delete-btn{
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:12px;
+    background:#181818;
+    color:#ff4f4f;
+    cursor:pointer;
+    transition:.3s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.delete-btn:hover{
+    background:#ff3b3b;
+    color:#fff;
+}
+
+/* RIGHT */
+
+.cart-right{
+    flex:1;
+    height:fit-content;
+
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+
+    padding:30px;
+
+    position:sticky;
+    top:30px;
+}
+
+.cart-right h2{
+    color:#fff;
+    margin-bottom:30px;
+    font-size:30px;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:18px;
+    color:#cfcfcf;
+    font-size:18px;
+}
+
+.cart-right hr{
+    border:none;
+    height:1px;
+    background:#333;
+    margin:25px 0;
+}
+
+.total{
+    color:#fff;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.checkout-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    background:#9cff00;
+    color:#000;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:30px;
+    transition:.35s;
+}
+
+.checkout-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 25px rgba(156,255,0,.35);
+}
+
+.continue-btn{
+    width:100%;
+    padding:16px;
+    border:1px solid #333;
+    background:transparent;
+    color:#fff;
+    border-radius:12px;
+    margin-top:15px;
+    cursor:pointer;
+    transition:.35s;
+    font-size:17px;
+}
+
+.continue-btn:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+.cart-page{
+    flex-direction:column;
+}
+
+.cart-card{
+    flex-wrap:wrap;
+}
+
+.cart-image{
+    width:100%;
+    height:180px;
+}
+
+.cart-image img{
+    width:110px;
+}
+
+.quantity{
+    width:100%;
+    justify-content:center;
+}
+
+.delete-btn{
+    width:100%;
+    height:50px;
+}
+
+.cart-right{
+    position:static;
+}
+
+}
+
+@media(max-width:600px){
+
+.cart-heading h1{
+    font-size:30px;
+}
+
+.cart-info h2{
+    font-size:20px;
+}
+
+.summary-row{
+    font-size:16px;
+}
+
+}

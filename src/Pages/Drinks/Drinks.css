@@ -1,0 +1,295 @@
+/* Styles for Drinks page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.drinks-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #050505;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  color: white;
+  font-family: sans-serif;
+}
+
+/* ================= Sidebar ================= */
+
+.sidebar {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.filter-box {
+  background: #141414;
+  border: 1px solid #232323;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.title h3 {
+  font-size: 18px;
+}
+
+.title span {
+  font-size: 12px;
+  color: #9cff00;
+  cursor: pointer;
+}
+
+.filter-box label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #d2d2d2;
+  margin: 13px 0;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.filter-box label:hover {
+  color: #9cff00;
+}
+
+.filter-box input {
+  accent-color: #9cff00;
+}
+
+/* ================= Content ================= */
+
+.drinks-page .content {
+  flex: 1;
+}
+
+/* ================= Banner ================= */
+
+.banner {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 18px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.banner h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  color: #bdbdbd;
+  margin-bottom: 25px;
+}
+
+.banner img {
+  width: 140px;
+}
+
+.coupon {
+  display: flex;
+}
+
+.coupon input {
+  width: 280px;
+  padding: 14px;
+  background: #1c1c1c;
+  color: white;
+  border: 1px solid #2f2f2f;
+  outline: none;
+  border-radius: 8px 0 0 8px;
+}
+
+.coupon button {
+  background: #9cff00;
+  color: black;
+  border: none;
+  padding: 0 22px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  transition: .3s;
+}
+
+.coupon button:hover {
+  box-shadow: 0 0 20px #9cff00;
+}
+
+/* ================= Heading ================= */
+
+.drinks-page .heading {
+  margin-bottom: 22px;
+  font-size: 30px;
+}
+
+/* ================= Grid ================= */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 22px;
+}
+
+/* ================= Card ================= */
+
+.card {
+  background: #161616;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #262626;
+  transition: .35s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #9cff00;
+  box-shadow: 0 0 25px rgba(156,255,0,.25);
+}
+
+.image-box {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+.price {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  background: #0b0b0b;
+  color: white;
+  padding: 7px 13px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.card-bottom {
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-bottom h3 {
+  font-size: 18px;
+}
+
+.card-bottom button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.card-bottom button:hover {
+  background: #9cff00;
+  transform: rotate(45deg);
+}
+
+/* ================= Responsive ================= */
+
+@media (max-width:1000px){
+
+.drinks-page{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+}
+
+.banner{
+flex-direction:column;
+text-align:center;
+gap:25px;
+}
+
+.coupon{
+justify-content:center;
+}
+
+}
+
+@media (max-width:600px){
+
+.coupon{
+flex-direction:column;
+}
+
+.coupon input{
+width:100%;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.coupon button{
+padding:15px;
+border-radius:8px;
+}
+
+.banner h1{
+font-size:28px;
+}
+
+.heading{
+font-size:24px;
+}
+
+}
+
+.price-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.price-buttons button{
+    width: 95px;
+    padding: 12px 0;
+    background: #1a1a1a;
+    border: 1px solid #2d2d2d;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.price-buttons button:hover{
+    background: #9cff00;
+    color: black;
+    border-color: #9cff00;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(156,255,0,.4);
+}

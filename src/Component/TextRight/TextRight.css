@@ -1,0 +1,25 @@
+/* Styles for TextRight component */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+.text-right{
+   font-family: "Creepster", cursive;
+    width: 300px;
+    height: 250px;
+  
+    letter-spacing: 2px;
+      word-spacing: 4px;
+      padding: 30px;
+      margin-top: 50px;
+      margin-left: 30px;
+      
+}
+.text-right h2{
+    font-size: 50px;
+font-family: "Creepster", cursive;
+    color: white;
+}
+.text-right sup{
+    background-color: rgb(24, 235, 24);
+    width: 100px;
+    color: black;
+    font-family: "Creepster", cursive;
+}
